@@ -22,5 +22,18 @@ module Fwstore
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    
+    #Landing Page
+    #Carousel image paths
+    config.carousel1s3path = 'https://s3.amazonaws.com/gofourwalls/globalimages/Pinnacle2-livingdining-carousel.jpg'
+    config.carousel2s3path = 'https://s3.amazonaws.com/gofourwalls/globalimages/dann-livingroom-carousel.jpg'
+    config.carousel3s3path = 'https://s3.amazonaws.com/gofourwalls/globalimages/Pinnacle-livingdining-carousel.jpg'
+    config.carousel4s3path = 'https://s3.amazonaws.com/gofourwalls/globalimages/Echo-livingdining-carousel.jpg'
+  
+    #Global variables for the webapp
+    config.twitterpath = 'https://twitter.com/go4walls/'
+    config.facebookpath = 'https://www.facebook.com/gofourwalls/'
+    config.pinterestpath = 'https://www.pinterest.com/gofourwalls/'
+    
   end
 end

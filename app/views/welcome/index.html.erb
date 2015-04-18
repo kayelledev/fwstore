@@ -11,7 +11,7 @@
   
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img class="first-slide" src="http://gofourwalls.com/wp-content/uploads/2015/03/Pinnacle-small-space-lightened.jpg" alt="First slide">
+      <img class="first-slide" src="<%= Rails.application.config.carousel1s3path %>" alt="First slide">
       <div class="container">
         <div class="carousel-caption">
           <h1>Example headline.</h1>
@@ -22,7 +22,7 @@
     </div>
 	
     <div class="item">
-      <img class="fill" src="http://gofourwalls.com/wp-content/uploads/2015/01/kitchen.jpg" alt="Second slide">
+      <img class="fill" src="<%= Rails.application.config.carousel2s3path %>" alt="Second slide">
       <div class="container">
         <div class="carousel-caption">
           <h1>Another example headline.</h1>
@@ -32,7 +32,17 @@
       </div>
     </div>
     <div class="item">
-      <img class="third-slide" src="http://gofourwalls.com/wp-content/uploads/2015/03/C-Premium-LivingRoom-featured-darkened.jpeg" alt="Third slide">
+      <img class="third-slide" src="<%= Rails.application.config.carousel3s3path %>" alt="Third slide">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>One more for good measure.</h1>
+          <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+          <p><a class="btn btn-xl" href="#" role="button">Browse gallery</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img class="third-slide" src="<%= Rails.application.config.carousel4s3path %>" alt="Third slide">
       <div class="container">
         <div class="carousel-caption">
           <h1>One more for good measure.</h1>
@@ -52,63 +62,6 @@
   </a>
 </div><!-- /.carousel -->
 </header>
-
-
-<!-- Cyrus works -->
-<div id="works"  class=" clearfix grid"> 
-    <figure class="effect-oscar  wowload fadeIn">
-        <img src="http://gofourwalls.com/wp-content/uploads/2015/03/Pinnacle-small-space-lightened.jpg" alt="img01"/>
-        <figcaption>
-            <h2>Nature</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="http://gofourwalls.com/wp-content/uploads/2015/03/Pinnacle-small-space-lightened.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="http://gofourwalls.com/wp-content/uploads/2015/03/Pinnacle-small-space-lightened.jpg" alt="img01"/>
-        <figcaption>
-            <h2>Events</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="http://gofourwalls.com/wp-content/uploads/2015/03/Pinnacle-small-space-lightened.jpg" title="1" data-gallery>View more</a></p>            
-        </figcaption>
-    </figure>
-     <figure class="effect-oscar  wowload fadeIn">
-         <img src="http://gofourwalls.com/wp-content/uploads/2015/03/Pinnacle-small-space-lightened.jpg" alt="img01"/>
-         <figcaption>
-             <h2>Nature</h2>
-             <p>Lily likes to play with crayons and pencils<br>
-             <a href="http://gofourwalls.com/wp-content/uploads/2015/03/Pinnacle-small-space-lightened.jpg" title="1" data-gallery>View more</a></p>            
-         </figcaption>
-     </figure>
-      <figure class="effect-oscar  wowload fadeInUp">
-         <img src="http://gofourwalls.com/wp-content/uploads/2015/03/Pinnacle-small-space-lightened.jpg" alt="img01"/>
-         <figcaption>
-             <h2>Events</h2>
-             <p>Lily likes to play with crayons and pencils<br>
-             <a href="http://gofourwalls.com/wp-content/uploads/2015/03/Pinnacle-small-space-lightened.jpg" title="1" data-gallery>View more</a></p>            
-         </figcaption>
-     </figure>
-      <figure class="effect-oscar  wowload fadeInUp">
-         <img src="http://gofourwalls.com/wp-content/uploads/2015/03/Pinnacle-small-space-lightened.jpg" alt="img01"/>
-         <figcaption>
-             <h2>Events</h2>
-             <p>Lily likes to play with crayons and pencils<br>
-             <a href="http://gofourwalls.com/wp-content/uploads/2015/03/Pinnacle-small-space-lightened.jpg" title="1" data-gallery>View more</a></p>            
-         </figcaption>
-     </figure>
-      <figure class="effect-oscar  wowload fadeInUp">
-         <img src="http://gofourwalls.com/wp-content/uploads/2015/03/Pinnacle-small-space-lightened.jpg" alt="img01"/>
-         <figcaption>
-             <h2>Events</h2>
-             <p>Lily likes to play with crayons and pencils<br>
-             <a href="http://gofourwalls.com/wp-content/uploads/2015/03/Pinnacle-small-space-lightened.jpg" title="1" data-gallery>View more</a></p>            
-         </figcaption>
-     </figure>
-     
-</div>
-<!-- works -->
-
-
 
 <!-- Services Section -->
 <section id="services" style="border: 1px;">
@@ -312,7 +265,7 @@
                         </li>
                         <li><a href="#"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a>
                         </li>
                     </ul>
                 </div>
