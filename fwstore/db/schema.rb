@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150415013506) do
+ActiveRecord::Schema.define(version: 20150416035524) do
+
+  create_table "items", force: :cascade do |t|
+    t.integer  "item_id"
+    t.string   "item_sku"
+    t.string   "item_name"
+    t.string   "item_type"
+    t.string   "item_description"
+    t.string   "item_dimensions"
+    t.string   "item_materials"
+    t.string   "item_Photo_1"
+    t.string   "item_Photo_2"
+    t.string   "item_Photo_3"
+    t.string   "item_Photo_4"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "nifty_attachments", force: :cascade do |t|
     t.integer  "parent_id"
