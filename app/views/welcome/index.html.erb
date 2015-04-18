@@ -15,8 +15,8 @@
       <div class="container">
         <div class="carousel-caption">
           <h1>Example headline.</h1>
-          <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-          <p><a class="btn btn-xl" href="#" role="button">Sign up today</a></p>
+          <p>Note: If you're viewing this page via a </p>
+          <p><a class="btn btn-xl" href="<%= link_to "Shop now", products_url, class: "btn btn-xl center"%></a></p>
         </div>
       </div>
     </div>
@@ -68,21 +68,22 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Rooms in a box</h2>
+                <h2 class="section-heading">Room in a box</h2>
                 <h3 class="section-subheading text-muted">Choose the best tier for your room.</h3>
-				<div style="margin-top: -2em; margin-bottom: 2em;"><%= link_to "Shop now", products_url, class: "btn btn-xl center"%></div>
+				<div style="margin-top: 2em; margin-bottom: 2em;"><%= link_to "Shop now", products_url, class: "btn btn-xl center"%></div>
             </div>
         </div>
         <div class="row text-center">
             <div class="col-md-4">
-                <span class="fa-stack fa-4x">
+                <!--<span class="fa-stack fa-4x">
                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
                     <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                </span>
+                </span>-->
 		        <h2>Basic</h2>
 		        <h3>$1499</h3>
-		        <p>Room size 7'x9' or 60-70 sqr.ft.</p>
-		        <table width="100%" style="margin-bottom:0px;">
+		        <h5>Room size 7'x9' or 60+ sqr.ft.</h5>
+				<h5>Includes 3 essential furniture items</h5>
+		        <!--<table width="100%" style="margin-bottom:0px;">
 		          <tbody>
 		            <tr>
 		            <td width="30%"></td>
@@ -93,17 +94,18 @@
 		            </td>
 		          </td>
 		          </tbody>
-		        </table>
+		        </table>-->
             </div>
             <div class="col-md-4">
-                <span class="fa-stack fa-4x">
+                <!--<span class="fa-stack fa-4x">
                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
                     <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                </span>
+                </span>-->
 		        <h2>Regular</h2>
 		        <h3>$1999</h3>
-		        <p>Room size 8'x9' or 70-90 sqr.ft.</h4>
-		          <table width="100%" style="margin-bottom:0px;">
+		        <h5>Room size 8'x9' or 70+ sqr.ft.</h5>
+				<h5>Includes 5 or more furniture items</h5>
+		          <!--<table width="100%" style="margin-bottom:0px;">
 		          <tbody>
 		            <tr>
 		            <td width="30%"></td>
@@ -116,17 +118,18 @@
 		            </td>
 		          </td>
 		          </tbody>
-		        </table>
+		        </table>-->
             </div>
             <div class="col-md-4">
-                <span class="fa-stack fa-4x">
+                <!--<span class="fa-stack fa-4x">
                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
                     <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-                </span>
+                </span>-->
 		        <h2>Premium</h2>
-		        <h3>$2299-2499</h3>
-		        <p>Room size 9'x11' or 90 sqr.ft. and larger</p>
-		        <table width="100%" style="margin-bottom:0px;">
+		        <h3>$2499</h3>
+		        <h5>Room size 9'x11' or 90+ sqr.ft.</h5>
+		        <h5>Includes 9 or more furniture items</h5>
+			    <!--<table width="100%" style="margin-bottom:0px;">
 		          <tbody>
 		            <tr>
 		            <td width="30%"></td>
@@ -142,35 +145,44 @@
 		            </td>
 		          </td>
 		          </tbody>
-		        </table>
+		        </table>-->
             </div>
         </div>
-		<p align="left">*An occasional table can be a side table or a console table</p>
+		<!--<p align="left">*An occasional table can be a side table or a console table</p>-->
     </div>
 </section>
 
-  <!-- START THE FEATURETTES -->
-<section id="hello" style="background-image: url(http://gofourwalls.com/wp-content/uploads/2015/03/autumn-livingkitchen-compressed.jpg); opacity: .9; margin: 0; width: 100%; height: 30em;">
+<section style="background-image: url(https://s3.amazonaws.com/gofourwalls/globalimages/banner-autumn-livingdining-dark.jpg); opacity: .8; margin: 0; width: 100%; height: auto;">
+	<!-- Begin MailChimp Signup Form -->
+	<div id="mc_embed_signup">
+		<form action="//gofourwalls.us9.list-manage.com/subscribe/post?u=2925a3a7e8e3d72d2bf106eca&amp;id=82d02b4614" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+		    <div id="mc_embed_signup_scroll">
+			<h2 class="section-heading text-center" style="color: #fff; ">Stay in touch!</h1>
+			<h3 class="section-subheading text-center" style="color: #fff; font-size: 14pt;">You'll be the first to get your latest news and our newest rooms</h3>
+			<div class="mc-field-group text-center" style="color: #fff; font-size: 14pt;" >
+				<label for="mce-EMAIL" >Email Address  <span class="asterisk">*</span></label>
+				<input type="email" value="" name="EMAIL" class="required email text-center" id="mce-EMAIL">
+				<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-xl center">
+			</div>
+			<div id="mce-responses" class="clear">
+				<div class="response" id="mce-error-response" style="display:none"></div>
+				<div class="response" id="mce-success-response" style="display:none"></div>
+			</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+		    </div>
+		</form>
+	</div>
 
-	<h1 class="section-heading text-center">Maximize function</h1>
-	<h1 class="section-subheading text-center">in limited real estates</h1>
+	<!--End mc_embed_signup-->
 
 </section>
 
-<section>
-	<h1 class="featurette-heading">We excel in <span class="muted">small space planning.</span></h1>
-	              <p class="lead">Our team of designers are all condo dwellers who care about maximizing function in small spaces, without adding real estates. Keeping condo-living in mind, we curate furniture that are condo-friendly in sizes and functions. The furniture often serve multiple purposes.</p>
-  <!-- START THE FEATURETTES -->
-</section>
-
-
-<!-- About Section -->
+<!-- How it works Section -->
 <section id="about">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">About</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <h2 class="section-heading">How it works</h2>
+				<h3 class="section-subheading"></h3>
             </div>
         </div>
         <div class="row">
@@ -178,65 +190,51 @@
                 <ul class="timeline">
                     <li>
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="../../images/about/1.jpg" alt="">
+                            <img class="img-circle img-responsive" src="https://s3.amazonaws.com/gofourwalls/globalimages/homepage-howitworks.jpg" alt="Browse the rooms">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>2009-2011</h4>
-                                <h4 class="subheading">Our Humble Beginnings</h4>
+                                <h4>Shop the rooms</h4>
+                                <h4 class="subheading">from the comfort of your home</h4>
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                <p class="text-muted">We love interior design. We only curate furniture that appeal to a design-savvy eye. Our style is practical modernism with a midcentury touch. Each piece of furniture in our room has a timeless quality.</p>
                             </div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+                            <img class="img-circle img-responsive" src="https://s3.amazonaws.com/gofourwalls/globalimages/homepage-howitworks-pickroom.jpg" alt="Pick a room">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>March 2011</h4>
-                                <h4 class="subheading">An Agency is Born</h4>
+                                <h4>Choose one of the tiers</h4>
+                                <h4 class="subheading">Basic, Regular, Premium</h4>
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                <p class="text-muted">Our team of designers are condo dwellers who care about maximizing function in small spaces. We curate furniture that are condo-friendly in sizes and functions. The furniture often serve multiple purposes.</p>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+                        <div class="timeline-image" style="padding-top: 2.5em;">
+                            <i class="img-circle img-responsive fa-stack fa-4x fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>December 2012</h4>
-                                <h4 class="subheading">Transition to Full Service</h4>
+                                <h4>Add To Cart</h4>
+                                <h4 class="subheading">Get it delivered!</h4>
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                <p class="text-muted">We offer top-knotch white glove services to deliver and assemble your room. Completely hassle-free!</p>
                             </div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
-                        </div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>July 2014</h4>
-                                <h4 class="subheading">Phase Two Expansion</h4>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>Be Part
-                                <br>Of Our
-                                <br>Story!</h4>
+                        <div class="timeline-image" style="background-color: #000; opacity: .7;">
+                            <h4>Get your
+                                <br>room in a box
+                                <br>now!</h4>
                         </div>
                     </li>
                 </ul>
@@ -251,30 +249,30 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">Our Amazing Team</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <h3 class="section-subheading text-muted">From the amazing Toronto, Canada</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-6">
                 <div class="team-member">
-                    <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
-                    <h4>Kay Garland</h4>
-                    <p class="text-muted">Lead Designer</p>
+                    <img src="https://s3.amazonaws.com/gofourwalls/globalimages/fw-team-karen.jpeg" class="img-responsive img-circle" alt="Karen Lau" style="width: 15em;">
+                    <h4>Karen Lau</h4>
+                    <p class="text-muted">Technology & Design</p>
                     <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        <li><a href="https//www.twitter.com/karenlau_ck"><i class="fa fa-twitter"></i></a>
                         </li>
                         <li><a href="#"><i class="fa fa-facebook"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-pinterest"></i></a>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
                 <div class="team-member">
-                    <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
-                    <h4>Larry Parker</h4>
-                    <p class="text-muted">Lead Marketer</p>
+                    <img src="https://s3.amazonaws.com/gofourwalls/globalimages/fw-team-mike.jpeg" class="img-responsive img-circle" alt="Michael Van" style="width: 15em;">
+                    <h4>Michael Van</h4>
+                    <p class="text-muted">Business Development</p>
                     <ul class="list-inline social-buttons">
                         <li><a href="#"><i class="fa fa-twitter"></i></a>
                         </li>
@@ -285,35 +283,15 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <div class="team-member">
-                    <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
-                    <h4>Diana Pertersen</h4>
-                    <p class="text-muted">Lead Developer</p>
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                <p class="large text-muted">We are always looking for bright talents to join our team! Contact us if interested.</p>
             </div>
         </div>
     </div>
 </section>
 
 
-</div>	
-
-<%= link_to 'My Blog', controller: 'articles' %>
-
-<%= link_to 'New Blog', new_article_path %>
-
-
+</div>
