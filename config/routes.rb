@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :articles do 
     resources :comments   
   end 
+  resources :charges
   
   #show, buying products
   get "product/:permalink", to: "products#show", as: "product"
