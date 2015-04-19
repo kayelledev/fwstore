@@ -30,7 +30,6 @@ gem 'shoppe', '~> 1.0'
 gem "shoppe-stripe", require: "shoppe/stripe"
 
 gem 'mailchimp-api', require: 'mailchimp'
->>>>>>> addmailchimp
 
 #for Heroku
 gem 'rails_12factor', group: :production
