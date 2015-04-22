@@ -4,7 +4,8 @@ class OrdersController < ApplicationController
   def destroy
     current_order.destroy
     session[:order_id] = nil
-    redirect_to root_path, :notice => "Basket emptied successfully."
+    #redirect_to root_path, :notice => "Basket emptied successfully."
+    redirect_to products_path
   end
   
   def checkout
@@ -24,13 +25,15 @@ class OrdersController < ApplicationController
   
   def payment
     @order = current_order
-    puts "in payment method"
     puts @order.id 
     #@order = Shoppe::Order.find(session[:current_order_id])
     if request.post?
       if @order.accept_stripe_token(params[:stripe_token])
+        params.merge!(:order => @order)
+        puts "payment successful"
         redirect_to checkout_confirmation_path
       else
+        puts "payment failed"
         flash.now[:notice] = "Could not exchange Stripe token. Please try again."
       end
     end
@@ -38,6 +41,7 @@ class OrdersController < ApplicationController
   
   def confirmation
     if request.post?
+      puts "------ post in confirmation"
       current_order.confirm!
       session[:order_id] = nil
       redirect_to root_path, :notice => "Order has been placed successfully!"
