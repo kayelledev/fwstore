@@ -12,10 +12,31 @@
   <%= image_tag @product.data_sheet.path, :width => '200px', :style => "float:right" %>
 <% end %>
 
-<p><%= @product.short_description %></p>
+<p><%= @product.short_description %> and the product's permalink is <%=@product.permalink%></p>
 <p>
   <b><%= number_to_currency @product.price %></b>
-  <%= link_to "Add to basket", product_path(@product.permalink), :method => :post %>
+ 
+
+  <% if params[:varsku]!= nil
+	  params.delete :varsku
+	end 
+	
+  if @product.has_variants? 
+	  
+  	for var in @product.variants %> 
+  	    <%= radio_button_tag :varsku, var.sku %>
+		<%= var.permalink %>
+		
+    <% end %>
+  <% puts "#{@params}"%>
+		
+   <%= link_to "Add to basket", product_path(:permalink => @product.permalink, :sku => @product.sku), :method => :post %>
+ <% else%>
+
+	  <%= link_to "Add to basket", product_path(:permalink => @product.permalink, :sku => @product.sku), :method => :post %>	  
+	  
+<% end %>
+
 </p>
 
 <hr>
