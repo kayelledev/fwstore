@@ -23,14 +23,14 @@
 	
   if @product.has_variants? 
 	  
-  	for var in @product.variants %> 
-  	    <%= radio_button_tag :varsku, var.sku %>
-		<%= var.permalink %>
+  	for @var in @product.variants %> 
+  	    <%= radio_button_tag :varsku, @var.sku, true %>
+		<%= @var.permalink %>
 		
     <% end %>
   <% puts "#{@params}"%>
 		
-   <%= link_to "Add to basket", product_path(:permalink => @product.permalink, :sku => @product.sku), :method => :post %>
+   <%= link_to "Add to basket", product_path(:permalink => @product.permalink, :sku => @product.sku, :varsku => @var.sku), :method => :post %>
  <% else%>
 
 	  <%= link_to "Add to basket", product_path(:permalink => @product.permalink, :sku => @product.sku), :method => :post %>	  

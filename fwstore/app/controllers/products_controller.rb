@@ -16,6 +16,7 @@ class ProductsController < ApplicationController
       if @t_sku == nil 
         @product = Shoppe::Product.find_by_sku!(params[:sku])
       else 
+        puts @t_sku
         @product = Shoppe::Product.find_by_sku!(params[:varsku])
       end 
       

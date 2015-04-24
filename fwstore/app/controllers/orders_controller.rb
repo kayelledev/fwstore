@@ -30,7 +30,8 @@ class OrdersController < ApplicationController
     if request.post?
       if @order.accept_stripe_token(params[:stripe_token])
         params.merge!(:order => @order)
-        puts "payment successful"
+        
+        puts "after  removed stripe_charge"
         redirect_to checkout_confirmation_path
       else
         puts "payment failed"
